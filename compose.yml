@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  excalidraw-room:
+    build:
+      context: .
+    container_name: excalidraw-room
+    ports:
+      - "23080:80"
+    volumes:
+      - ./:/excalidraw-room:delegated
+      - ./package.json:/excalidraw-room/package.json
+      - ./yarn.lock:/excalidraw-room/yarn.lock
+      - notused:/excalidraw-room/node_modules
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  notused:
