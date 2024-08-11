@@ -12,5 +12,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "outDir": "dist"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",  // 排除测试文件
+    "dist"           // 排除输出目录
+  ]
 }

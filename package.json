@@ -24,7 +24,7 @@
   "name": "excalidraw-portal",
   "prettier": "@excalidraw/prettier-config",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --noEmitOnError",
     "fix:code": "yarn test:code --fix",
     "fix:other": "yarn prettier --write",
     "fix": "yarn fix:other && yarn fix:code",
